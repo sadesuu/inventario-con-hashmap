@@ -44,6 +44,8 @@ public class producto {
         this.stock = stock;
     }
 
+
+    //La complejidad es de o1
     @Override
     public String toString() {
         return
