@@ -67,6 +67,22 @@ public class inventario {
         return productosFiltrados;
     }
 
+    public void precioTotal() {
+        double total = 0;
+        for (producto p : productos.values()) {
+            total += p.getPrecio() * p.getStock();
+        }
+        System.out.println("Valor total del inventario: " + total);
+    }
+
+    public void tamanoInventarioPorStock() {
+        int totalItems = 0;
+        for (producto p : productos.values()) {
+            totalItems += p.getStock();
+        }
+        System.out.println("Total de items en el inventario: " + totalItems);
+    }
+
     public void mostrarInventario() {
         System.out.println("Inventario completo:");
         for (producto p : productos.values()) {
